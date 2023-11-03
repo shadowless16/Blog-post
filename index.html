@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Blog Page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("demo");
+		  let captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		  captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+	</script>
+	<div class="header">
+	  <h2>Oshameyan Faith Oluwadamilola Blog Post</h2>
+	</div>
+
+	<div class="row">
+	  <div class="leftcolumn">
+	    <div class="card">
+      <h2>About Me</h2>
+      <h5>Title description, Oct 30, 2023</h5>
+      <div class="fag">
+          <img src="img/happy.jpg" alt="wow" style="max-width: 500px; height: auto; display: block;">
+      </div>
+
+      <p>Hello, I'm Oshameyan Faith Oluwadamilola, and I'm a 15-year-old student in SS3 with big dreams. My passion is to become a Neurosurgeon, and I'm on a dedicated path to achieve that goal.</p>
+      <p>
+        Favorites:
+      </p>
+
+      <p>
+        Food: I absolutely love pounded yam and egusi; it's a taste of home that always brings me comfort.
+        Color: While I used to favor black, my mom's preference led me to appreciate the soothing qualities of blue, even if I don't have a particular reason for it.
+      </p>
+
+      <p>Relaxation:</p>
+      <p>When it's time to relax, I'm a big fan of movies and TV shows. I'm drawn to genres like romance, sci-fi, and horror, especially if they feature elements like witches, vampires, half-breeds, or werewolves.</p>
+
+      <!-- Container for the image gallery -->
+	<div class="container">
+		<h2>Gallery</h2>
+
+	  <!-- Full-width images with number text -->
+	  <div class="mySlides">
+	    <div class="numbertext">1 / 6</div>
+	      <img src="img/1.jpg" style="height:400px">
+	  </div>
+
+	  <div class="mySlides">
+	    <div class="numbertext">2 / 6</div>
+	      <img src="img/2.jpg" style="height:400px">
+	  </div>
+
+	  <div class="mySlides">
+	    <div class="numbertext">3 / 6</div>
+	      <img src="img/3.jpg" style="height:400px">
+	  </div>
+
+	  <div class="mySlides">
+	    <div class="numbertext">4 / 6</div>
+	      <img src="img/4.jpg" style="height:400px">
+	  </div>
+
+	  <div class="mySlides">
+	    <div class="numbertext">5 / 6</div>
+	      <img src="img/5.jpg" style="height:400px">
+	  </div>
+
+	  <div class="mySlides">
+	    <div class="numbertext">6 / 6</div>
+	      <img src="img/6.jpg" style="height:400px">
+	  </div>
+
+	  <!-- Next and previous buttons -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	  <!-- Image text -->
+	  <div class="caption-container">
+	    <p id="caption"></p>
+	  </div>
+
+	  <!-- Thumbnail images -->
+	  <div class="row">
+	    <div class="column">
+	      <img class="demo cursor" src="img/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+	    </div>
+	    <div class="column">
+	      <img class="demo cursor" src="img/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+	    </div>
+	    <div class="column">
+	      <img class="demo cursor" src="img/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+	    </div>
+	    <div class="column">
+	      <img class="demo cursor" src="img/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+	    </div>
+	    <div class="column">
+	      <img class="demo cursor" src="img/5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+	    </div>
+	    <div class="column">
+	      <img class="demo cursor" src="img/6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+	    </div>
+	  </div>
+	</div>
+
+    </div>
+	        <div class="card">
+		      <h2>More Info About Me</h2>
+		      <h5>Title description, oct 31, 2023</h5>
+		      <div class="fakeimg" style="height:400px;">
+		        <p>
+		          <strong>Hobbies</strong> 
+		        </p>
+		        <p>
+		          I'm an avid reader, and novels are my escape into different worlds and adventures.
+		        </p>
+		        <br>
+		        <p>
+		           <strong>Childhood Memories</strong>
+		        </p>
+		        <p>
+		          I cherish childhood memories that bring a smile to my face, perhaps with my five older siblings, being the youngest in the family.
+		        </p>
+		        <br>
+		        <p>
+		           <strong>Favorite Season</strong>
+		        </p>
+		        <p>
+		          I have a special connection with the Harmattan season as it falls around my birthday, making it extra memorable.
+		        </p>
+		        <p>
+		          As the youngest of five siblings, I'm on a remarkable journey to fulfill my dream of becoming a Neurosurgeon, all while exploring the wonders of life, from literature to the magic of the silver screen. Join me on this exciting path of discovery and ambition!
+		        </p>
+		      </div>
+		    </div>
+		  </div>
+	  <div class="rightcolumn">
+	    <div class="card">
+	      <h2>More About Me</h2>
+	      <div class="fakeimg" style="height:100px;">Image</div>
+	      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+	    </div>
+	    <div class="card">
+	      <h3>Popular Post</h3>
+	      <div class="fakeimg">First Day In SS Class</div><br>
+	      <div class="fakeimg">My First Day</div><br>
+	      <div class="fakeimg">Most Favorite Day</div>
+	    </div>
+	    <div class="card">
+	      <h3>Follow Me</h3>
+	      <div class="social-icons">
+	        <a href="#" class="icon">
+	            <img src="img/facebook-icon.png" alt="Facebook">
+	        </a>
+	        <a href="#" class="icon">
+	            <img src="img/instagram-icon.jpg" alt="Instagram">
+	        </a>
+	        <a href="#" class="icon">
+	            <img src="img/tiktok-icon.png" alt="TikTok">
+	        </a>
+	        <a href="#" class="icon">
+	            <img src="img/whatsapp-icon.png" alt="WhatsApp">
+	        </a>
+	    </div>
+	    </div>
+	  </div>
+	</div>
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+</body>
+</html>

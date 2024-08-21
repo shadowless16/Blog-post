@@ -213,15 +213,13 @@ h5 {
 
 /* Media query for screens smaller than 800px */
 @media screen and (max-width: 800px) {
-  /* Stack columns on top of each other */
   .leftcolumn, .rightcolumn {
-    float: none;  /* Remove the float */
-    width: 100%;  /* Make them full width */
-    padding: 0;   /* Remove any padding */
+    float: none;
+    width: 100%; 
+    padding: 0; 
   }
 
-  /* Add margin to the right column to separate it from the left */
   .rightcolumn {
-    margin-top: 20px;  /* Add space between the stacked columns */
+    margin-top: 20px;
   }
 }
